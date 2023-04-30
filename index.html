@@ -2,8 +2,35 @@
 <html lang="en">
 <head>
   <title>Tracer755</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Tracer755</h1>
+  <center>
+    <h1 style="padding: 8vh">Tracer755</h1>
+  </center>
+  <div id="contentArea" class="contentAreaOpen">
+    <!--<div style="width: 50%;" id="twitch-embed"></div>-->
+    <iframe
+            src="https://player.twitch.tv/?https://www.twitch.tv/channel=bardicrj&parent=tracer755.com"
+            height="<height>"
+            width="<width>"
+            allowfullscreen>
+    </iframe>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  <script src="js/twitch.js"></script>
+  
+  
+  <script type="text/javascript">
+    /*
+    new Twitch.Embed("twitch-embed", {
+      width: 1080,
+      height: 720,
+      channel: "bardicrj",
+      // Only needed if this page is going to be embedded on other websites
+      parent: ["tracer755.com", "localhost"]
+    });*/
+  </script>
 </body>
 </html>

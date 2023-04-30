@@ -1,0 +1,38 @@
+body{
+  background-color: #00060d;
+}
+
+h1{
+  color: white; 
+}
+h2{
+  color: white; 
+}
+h3{
+  color: white; 
+}
+h4{
+  color: white; 
+}
+h5{
+  color: white; 
+}
+h6{
+  color: white; 
+}
+
+div.contentAreaClosed{
+  background-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
+  transition: .7s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+div.contentAreaOpen{
+  background-image: linear-gradient(to bottom, transparent, white 5%, white 95%, transparent);
+  transition: .7s ease;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  width: 100%;
+}

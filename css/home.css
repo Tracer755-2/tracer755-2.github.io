@@ -1,12 +1,12 @@
-.container {
+.twitch-container {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 0;
   padding-bottom: 56%;
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
-.aspect-ratio iframe {
+.aspect-ratio {
   position: absolute;
   width: 100%;
   height: 50%;

@@ -24,11 +24,13 @@ h6{
 div.contentAreaClosed{
   background-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
   transition: .7s ease;
+  padding: 10px;
   width: 100%;
 }
 
 div.contentAreaOpen{
   background-image: linear-gradient(to bottom, transparent, white 5%, white 95%, transparent);
   transition: .7s ease;
+  padding: 10px;
   width: 100%;
 }

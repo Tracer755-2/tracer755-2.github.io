@@ -1,0 +1,72 @@
+.homeHeadderImage{
+  background-image: linear-gradient(to bottom, transparent 95%, #00060d), url('https://pbs.twimg.com/media/FmkW20HWYAAB-sF?format=jpg&name=4096x4096'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+div.homeHeadderPadding{
+  padding-top: 11vh; 
+  padding-bottom: 9vh; 
+}
+
+div.twitchContentOpen{
+  background-image: linear-gradient(to bottom, transparent, #000e1f 8%, #000e1f 92%, transparent);
+  padding-top: 6vh;
+  padding-bottom: 5vh;
+  margin-bottom: 3vw;
+  transition: .7s; 
+  animation-name: twitch-open-animate;
+  animation-duration: 1s;
+  transform: scaleY(1);
+  display: block;
+}
+div.twitchContentClose{
+  background-image: linear-gradient(to bottom, transparent, #000e1f 8%, #000e1f 92%, transparent);
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  transition: .7s; 
+  transform: scaleY(0);
+  animation-name: twitch-close-animate;
+  animation-duration: 1s;
+  height: 0;
+}
+
+@keyframes twitch-open-animate {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    display: block;
+  }
+}
+@keyframes twitch-close-animate {
+  0% {
+    transform: scaleY(1);
+  }
+  99% {
+    transform: scaleY(0);
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%; /* change this to a fixed width, or create a container with a width. */
+  height: 100%;
+}
+
+@media (min-width: 700px) {
+  .homeHeadderImage{
+    background-image: linear-gradient(to bottom, transparent 95%, #00060d), url('https://pbs.twimg.com/media/FmkW20HWYAAB-sF?format=jpg&name=4096x4096'); 
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+  }
+  div.homeHeadderPadding{
+    padding-top: 22vh; 
+    padding-bottom: 39.746vh; 
+  }
+}

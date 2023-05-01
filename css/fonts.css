@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Outage_Cut;
+  src: url("../fonts/Outage_Cut.ttf");
+}
+.OutageFontCut{
+  font-family: Outage_Cut;
+}
+@font-face {
+  font-family: Outage;
+  src: url("../fonts/Outage.ttf");
+}
+.OutageFont{
+  font-family: Outage;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand-Medium.ttf");
+}
+.QuicksandFont{
+  font-family: Quicksand;
+}

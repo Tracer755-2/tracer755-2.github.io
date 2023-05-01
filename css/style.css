@@ -50,6 +50,9 @@ hr {
   margin: auto;
 }
 
+div.halfboxPerm{
+  width: 50%; 
+}
 @media (min-width: 700px) {
   div.halfbox{
     width: 50%; 

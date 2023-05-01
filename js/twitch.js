@@ -33,6 +33,7 @@ function checkForLiveTwitch(){
   })
   .catch((error) => {
     console.log(error);
+    refreshTwitchBox(false);
   });
   
   setTimeout(() => {

@@ -35,6 +35,20 @@ h5{
 h6{
   color: white;
 }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  width: 85%;
+}
+.flexContainerPerm {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
 
 @media (min-width: 700px) {
   div.halfbox{

@@ -22,11 +22,25 @@
     </div>
   </center>
   <br><br>
-  <div class="twitchContentOpen flexContainer">
-    <div class="halfbox">
-    <iframe style="padding: .6vw;" class="iframe" src="https://player.twitch.tv/?channel=mr_bubblez&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-    </div>
-    <div class="halfbox">
+  <div id="twitchBox" class="twitchContentClose">
+    <div class="flexContainer">
+      <div class="halfbox">
+        <iframe style="padding: 1vw;" class="iframe" src="https://player.twitch.tv/?channel=korvaru&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+      </div>
+      <div class="halfbox" style="padding: 3vw;">
+        <h1 class="OutageFontCut" style="padding-left: 1vw; margin: 0;">Im Live</h1>
+        <hr style="margin: .4em 0;" />
+        <h4 class="OutageFontCut" id="twitchTitle"></h4>
+        <div class="flexContainerPerm">
+          <div class="halfbox">
+            <br>
+          </div>
+          <div class="halfbox">
+            <h5 class="OutageFontCut" id="twitchGameName" style="margin: 0;"></h5>
+            <img height="100%" src="" id="twitchGameIcon">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

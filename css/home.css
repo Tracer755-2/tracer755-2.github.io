@@ -53,6 +53,10 @@ div.twitchContentClose{
   }
 }
 
+h1.homeTracer755Text{
+  font-size: 10vw;
+}
+
 iframe.twitch {
   aspect-ratio:16 / 9;
   width: 88%; /* change this to a fixed width, or create a container with a width. */
@@ -73,5 +77,8 @@ iframe.twitch {
     aspect-ratio:16 / 9;
     width: 100%; /* change this to a fixed width, or create a container with a width. */
     height: auto;
+  }
+  h1.homeTracer755Text{
+    font-size: 4vw;
   }
 }

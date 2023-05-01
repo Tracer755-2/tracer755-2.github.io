@@ -53,9 +53,9 @@ div.twitchContentClose{
   }
 }
 
-iframe {
+iframe.twitch {
   aspect-ratio:16 / 9;
-  width: 100%; /* change this to a fixed width, or create a container with a width. */
+  width: 80%; /* change this to a fixed width, or create a container with a width. */
   height: auto;
 }
 
@@ -68,5 +68,10 @@ iframe {
   div.homeHeadderPadding{
     padding-top: 22vh; 
     padding-bottom: 39.746vh; 
+  }
+  iframe.twitch {
+    aspect-ratio:16 / 9;
+    width: 100%; /* change this to a fixed width, or create a container with a width. */
+    height: auto;
   }
 }

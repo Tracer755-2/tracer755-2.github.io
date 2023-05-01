@@ -55,7 +55,7 @@ div.twitchContentClose{
 
 iframe.twitch {
   aspect-ratio:16 / 9;
-  width: 80%; /* change this to a fixed width, or create a container with a width. */
+  width: 88%; /* change this to a fixed width, or create a container with a width. */
   height: auto;
 }
 

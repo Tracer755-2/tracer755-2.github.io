@@ -63,6 +63,14 @@ iframe.twitch {
   height: auto;
 }
 
+div.yt_text_width{
+  width: 50%;
+}
+
+div.yt_video_width{
+  width: 50%;
+}
+
 @media (min-width: 700px) {
   .homeHeadderImage{
     background-image: linear-gradient(to bottom, transparent 95%, #00060d), url('../content/img/FmkW20HWYAAB-sF.jpeg'); 
@@ -80,5 +88,12 @@ iframe.twitch {
   }
   h1.homeTracer755Text{
     font-size: 4vw;
+  }
+
+  div.yt_text_width{
+    width: 40%;
+  }
+  div.yt_video_width{
+    width: 60%;
   }
 }

@@ -4,7 +4,7 @@ var isLive = false;
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://api.twitch.tv/helix/streams?user_id=196929259',
+  url: 'https://api.twitch.tv/helix/streams?user_id=39664992',
   headers: { 
     'Client-ID': 'kgg81ytnzl7iphiz7417dzuets3sww', 
     'Authorization': 'Bearer 440z5xrww1adipiu4ukedqibnswlss'

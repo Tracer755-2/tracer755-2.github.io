@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 0;
+
+		overflow: hidden;
+		background-color: black;
+		height: 100%;
+	}
+	#player {
+		width: 100%;
+		height: 100%;
+	}
+	</style>
+</head>
+<body>
+	<video id="player">
+		<source id="player-mp4src" type="video/mp4">
+	</video>
+
+	<script type="text/javascript" src="https://wyozi.github.io/gmod-medialib/medialib.js"></script>
+	
+	<script src="https://vjs.zencdn.net/5.10.4/video.js"></script>
+	<script type="text/javascript">
+		medialibDelegate = medialib.createEventDelegate({
+			play: function() {
+				this.play();
+			},
+			pause: function() {
+				this.pause();
+			},
+			seek: function(obj) {
+				this.currentTime(obj.time);
+			},
+			setVolume: function(obj) {
+				this.volume(obj.vol);
+			}
+		});
+
+		var params = medialib.getParams();
+		var id = decodeURIComponent(params.id || params.vid);
+
+		var el = document.getElementById("vid");
+
+		document.getElementById("player-mp4src").setAttribute("src", id);
+		videojs("player", {"controls": false, "preload": "auto"}, function() {
+			this.load();
+		}).ready(function() {
+
+			this.on("play", function(e) {
+				medialib.emitEvent("stateChange", {state: "playing", time: this.currentTime()});
+			});
+			this.on("pause", function(e) {
+				medialib.emitEvent("stateChange", {state: "paused", time: this.currentTime()});
+			});
+			this.on("ended", function(e) {
+				medialib.emitEvent("stateChange", {state: "ended", time: this.currentTime()});
+			});
+			this.on("seeking", function(e) {
+				medialib.emitEvent("stateChange", {state: "buffering", time: this.currentTime()});
+			});
+			this.on("seeked", function(e) {
+				medialib.emitEvent("stateChange", {state: "playing", time: this.currentTime()});
+			});
+
+			medialibDelegate.playerLoaded(this);
+		});
+	</script>
+
+	<script>
+	(function(m,e,d,i,a,l,b){m['GoogleAnalyticsObject']=a;m[a]=m[a]||function(){
+	(m[a].q=m[a].q||[]).push(arguments)},m[a].l=1*new Date();l=e.createElement(d),
+	b=e.getElementsByTagName(d)[0];l.async=1;l.src=i;b.parentNode.insertBefore(l,b)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-43467815-2', 'auto');
+	ga('send', 'pageview');
+	</script>
+</body>
+</html>

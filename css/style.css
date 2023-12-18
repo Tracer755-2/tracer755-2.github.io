@@ -1,65 +1,33 @@
+@font-face {
+    font-family: Quicksand;
+    src: url("../fonts/Quicksand-Medium.ttf");
+}
+.QuicksandFont{
+    font-family: Quicksand;
+}
+
+@font-face {
+    font-family: Outage;
+    src: url("../fonts/Outage.ttf");
+}
+.OutageFont{
+    font-family: Outage;
+}
+
+@font-face {
+    font-family: Code-Bold;
+    src: url("../fonts/CODE\ Light.otf");
+}
+.CodeBold{
+    font-family: Code-Bold;
+}
+
+
 body{
-  background-color: #00060d;
-}
-html, body {
-    margin:0;
-    padding:0;
-}
-.flexContainer {
-  display: column;
-  flex-direction: row;
-  margin: auto;
-}
-div.halfbox{
-  width: 100%; 
-}
-br{
-  user-select: none;
+    background-color: #231f23;
 }
 
 h1{
-  color: white;
-}
-h2{
-  color: white;
-}
-h3{
-  color: white;
-}
-h4{
-  color: white;
-}
-h5{
-  color: white;
-}
-h6{
-  color: white;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-  width: 85%;
-}
-.flexContainerPerm {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-}
-
-div.halfboxPerm{
-  width: 50%; 
-}
-@media (min-width: 700px) {
-  div.halfbox{
-    width: 50%; 
-  }
-  .flexContainer {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-  }
+    font-family: Outage;
+    color: white;
 }

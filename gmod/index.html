@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUPs GM music tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://superiorservers.co/static/images/textless_logo.png" />
+  <link rel="icon" href="content/img/SUPs_Logo_Edit.png"/>
+
+  <link href="css/main.css" rel="stylesheet">
+  <!--<link href="css/vapor.css" rel="stylesheet">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/vapor/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="bs-component">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">SUPs GM audio tool</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="viewAll.html">All Tracks</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <center>
+    <br>
+    <div id="alertarea">
+      
+    </div>
+    <br>
+    <form>
+      <div class="form-group" style="max-width: 30vw;">
+        <label for="exampleInputEmail1" class="form-label mt-4">Youtube Link</label>
+        <input type="url" class="form-control" id="Youtube-link-input" aria-describedby="Youtube linl" placeholder="Enter youtube link">
+      </div>
+      <br>
+      <div class="d-grid gap-1" style="max-width: 20%;">
+        <button class="btn btn-primary" type="button" onclick="getVideo();">Get File</button>
+      </div>
+    </form>
+    <br><br>
+    <h3>FAQ</h3>
+    <h4>What is this</h4>
+    <h5>This is a tool to convert youtube videos that don't work in gmod into working links<br>This can take some time for longer tracks</h5>
+    <br>
+    <h4>Rules</h4>
+    <h5>Don't be a dumbass. <br>Please only use this on short videos >10 min<br>Don't delete stuff for no reason</h5>
+    <br>
+    <h4>How does this work</h4>
+    <a href="how.html"><h5>Read Here</h5></a>
+
+
+    <br><br><br><br>
+  </center>
+
+  <div style="width: 100%; padding-left: 18%; padding-right: 18%;" id="recentVideoBox">
+    <h3>Recent Files</h3>
+    <center id="recentLoading">
+      <div class="loader"></div>
+    </center>
+  </div>
+  <br><br>
+  <script src="js/api.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    PollAPI();
+    LoadHomePage();
+  </script>
+</body>
+</html>

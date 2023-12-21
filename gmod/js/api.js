@@ -43,7 +43,7 @@ function LoadHomePage(){
               <h4 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">` + obj.name + `</h4>
               <h5>` + secondsToHMS(obj.duration) + `</h5>
             </div>
-            <a href="preview.html?` + obj.id + `" style="margin-left: auto; margin-right: 10px;"><img src="/content/img/open-file.png" width="25" height="25" style="margin-left: auto; margin-right: 10px;"></a>
+            <a href="preview.html?` + obj.id + `" style="margin-left: auto; margin-right: 10px;"><img src="content/img/open-file.png" width="25" height="25" style="margin-left: auto; margin-right: 10px;"></a>
           </div>`;
           document.getElementById("recentVideoBox").innerHTML += htmlData;
         }

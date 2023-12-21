@@ -7,7 +7,7 @@ function loadAllTracks(){
         let obj = json.items[i];
         container.innerHTML += `
         <div class="card border-primary mb-3" style="max-width: 20rem;">
-          <img src="http://172.172.79.84:3000/thumbnail/` + obj.id + `.jpg">
+          <img src="` + apiBase + `/thumbnail/` + obj.id + `.jpg">
           <div class="card-body">
             <h6 class="card-title">` + obj.name + `</h6>
             <hr>

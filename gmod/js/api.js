@@ -1,4 +1,4 @@
-const apiBase = "https://172.172.79.84:3000";
+const apiBase = "https://gmod-api.tracer755.com";
 let quickParam = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
 
 document.body.innerHTML += `<center><hr style="width:60%; margin-bottom:6px;"><h6 style="padding-bottom:10px;">Made with &hearts; by Wicker</h6></center>`;

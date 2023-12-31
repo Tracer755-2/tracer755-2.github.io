@@ -1,8 +1,20 @@
 function loadAllTracks(){
+  let input = quickParam[0].split('=')[1];
+  document.getElementById("searchText").innerHTML = "Search: " + input.replace(/\+/g, ' ');
   axios.get(apiBase + "/api/search/tracks?q=" + quickParam[0].split('=')[1])
     .then(response => {
       let json = response.data;
       let container = document.getElementById("centerData");
+      if(json.items.length == 0){
+        let errorArea = document.getElementById("alertarea");
+
+        errorArea.innerHTML += `
+        <div class="alert alert-dismissible alert-warning" style="max-width: 40%;">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          There are no tracks that match your search
+        </div>
+        `;
+      }
       for(let i = 0; i < json.items.length; i++) {
         let obj = json.items[i];
         let viewText = "";

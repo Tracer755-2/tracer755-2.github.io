@@ -96,11 +96,11 @@ function getVideo(){
   else{
     let errorArea = document.getElementById("alertarea");
 
-      errorArea.innerHTML += `
-      <div class="alert alert-dismissible alert-danger" style="max-width: 40%;">
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <strong>Whoops!</strong> Sorry but thats not a valid link
-      </div>
-      `;
+    errorArea.innerHTML += `
+    <div class="alert alert-dismissible alert-danger" style="max-width: 40%;">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Whoops!</strong> Sorry but thats not a valid link
+    </div>
+    `;
   }
 }

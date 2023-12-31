@@ -5,6 +5,16 @@ function loadAllTracks(){
       let container = document.getElementById("centerData");
       for(let i = 0; i < json.items.length; i++) {
         let obj = json.items[i];
+        let viewText = "";
+        if(obj.views == 0){
+          viewText = "Never Played";
+        }
+        else{
+          viewText = obj.views;
+          if(obj.views == 1) {viewText += ' view'}
+          else{viewText += ' views'}
+        }
+
         container.innerHTML += `
         <div class="card border-primary mb-3" style="max-width: 20rem;">
           <img src="` + apiBase + `/thumbnail/` + obj.id + `.jpg">
@@ -12,6 +22,7 @@ function loadAllTracks(){
             <h6 class="card-title">` + obj.name + `</h6>
             <hr>
             <div>
+              <h5>` + viewText + `</h5>
               <a href="preview.html?` + obj.id + `"><button type="button" class="btn btn-primary">Preview</button></a>
               <button type="button" class="btn btn-success" onclick="copyLink('` + obj.id + `')">Copy</button>
             </div>

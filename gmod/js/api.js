@@ -93,6 +93,10 @@ function getVideo(){
     console.log(id);
     window.location.href = "loadFile.html?" + id;
   }
+  else if(input.includes("gmod-api.tracer755.com")){
+    id = input.split("/").pop().replace(".webm", "");
+    window.location.href = "loadFile.html?" + id;
+  }
   else{
     let errorArea = document.getElementById("alertarea");
 
